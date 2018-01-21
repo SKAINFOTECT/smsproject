@@ -22,7 +22,7 @@ import org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandl
 @EnableTransactionManagement
 @EntityScan(basePackages = {"com.ska.sms.entity"})
 @EnableJpaRepositories(basePackages = {"com.ska.sms.repository"})
-@SpringBootApplication(scanBasePackages = {"com.ska.sms.helper"})
+@SpringBootApplication(scanBasePackages = {"com.ska.sms.helper", "com.ska.sms.rest","com.ska.sms.service"})
 @EnableAspectJAutoProxy
 public class Application {
 

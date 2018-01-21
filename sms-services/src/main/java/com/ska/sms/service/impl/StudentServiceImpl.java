@@ -1,12 +1,14 @@
 package com.ska.sms.service.impl;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import com.ska.sms.entity.Student;
 import com.ska.sms.exception.StudentNotFoundException;
 import com.ska.sms.repository.StudentRepository;
 import com.ska.sms.service.StudentService;
 
+@Service
 public class StudentServiceImpl implements StudentService{
 
 	@Autowired

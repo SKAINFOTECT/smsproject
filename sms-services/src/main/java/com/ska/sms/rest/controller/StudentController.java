@@ -12,7 +12,7 @@ import com.ska.sms.entity.Student;
 import com.ska.sms.service.StudentService;
 
 @RestController
-@RequestMapping("student")
+@RequestMapping("/student")
 public class StudentController {
 	
 	@Autowired
