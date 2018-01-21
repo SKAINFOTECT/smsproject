@@ -1,0 +1,11 @@
+spring:
+  profiles:
+    active:
+    - dev
+server:
+  port: ${port:8080}
+  display-name: SMS Service  
+rest:
+  api:
+   base:
+     path: api/v1  

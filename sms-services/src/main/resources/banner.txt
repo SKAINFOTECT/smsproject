@@ -1,0 +1,2 @@
+
+					:: SMS Project sms-services ::  ${application.formatted-version}
