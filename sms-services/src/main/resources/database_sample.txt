@@ -1,0 +1,52 @@
+type_master
+id				int(PK)
+type			varchar(15)
+
+Example:
+1				Admin
+2				Super Admin
+3				Student
+4				Faculty
+
+
+status_master
+id 				int(PK)
+status			varchar(20) /// active/register/under verification
+
+users_master
+id 				int(PK)
+user_name		varchar(20)
+email			varchar(255)
+password		varchar(50)
+status			int (reference of status_master(id))
+type			int (reference of type_master)
+gender			varchar(1) /// M/F/O
+
+Note :  we can remove status_master, it's a temporary table.
+
+address_master
+id 				int(PK)
+type			varchar(10) /// Home/Work/Other
+user_id			int(reference of users_master(id))
+line_1			varchar(100)
+line_2			varchar(100)
+line_3			varchar(100),
+district		int(reference of district_master(id))
+state			int(reference of state_master(id))
+country			int(reference of country_master(id))
+
+
+district_master
+id 				int(PK)								// we can treat as district_code
+name			varchar(50)
+state			int(reference of state_master(id))
+
+state_master
+id 				int(PK)								// we can treat as state_code
+name			varchar(20)
+country_code	int(reference of country_master(id))
+
+
+country_master
+id 				int(PK)								// we can treat as country_code
+country_name	varchar(20)
